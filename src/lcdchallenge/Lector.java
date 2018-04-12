@@ -51,7 +51,8 @@ public class Lector {
 						throw new IllegalArgumentException("The size has to be a number between 1 and 10");
 					}
 					LCDDisplay display = new LCDSevenSegmentDisplay(arguments[1], size+2, 2*size+3);
-					out.write(display.display());
+					out.write(display.display()+"\n");
+					
 				} catch (NumberFormatException e) {
 					out.write(e.getMessage()+"\n");
 				} catch (IllegalArgumentException e) {
